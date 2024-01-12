@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Italianni's</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Facebook SDK -->
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0&appId=TU_APP_ID&autoLogAppEvents=1" nonce="ABCD1234"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const contenedorInicioTexto = document.querySelector('.contenedor__inicio__texto');
+            contenedorInicioTexto.classList.add('mostrar');
+        });
+
+        function inicializarMapa() {
+            var ubicacion = { lat: LATITUD, lng: LONGITUD };
+            var mapa = new google.maps.Map(document.getElementById('mapa'), { zoom: 15, center: ubicacion });
+            var marcador = new google.maps.Marker({ position: ubicacion, map: mapa });
+        }
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html">
+            <img class="header__logo" src="img/logo_italiannis.png" alt="Logotipo">
+        </a>
+    </header>
+
+    <nav class="navegacion">
+        <a class="navegacion__link" href="menu.html">Menú</a>
+        <a class="navegacion__link" href="contacto.html">Contacto</a>
+    </nav>
+
+    <main class="contenedor">
+        <section class="contenedor__inicio">
+            <h1>NUESTRA TRADICIÓN</h1>
+            <div class="contenedor__inicio__texto">
+                <p> Italianni’s, uno de los referentes de comida italiana en nuestro país nace en 1996 trayendo la
+                    pasión y la tradición de compartir a México. Con más de 70 restaurantes y presencia en más de 10
+                    estados, Italianni’s te invita a vivir una experiencia única.
+                </p>
+                <p>¡Te esperamos!</p>
+            </div>
+        </section>
+
+        <section class="contenedor__menu">
+            <div class="contenedor__menu__desayunos">
+                <a class="contenedor__menu__texto" href="desayunos/dellacasa.html">DESAYUNOS</a>
+            </div>
+
+            <div class="contenedor__menu__comidas">
+                <a class="contenedor__menu__texto" href="comidas/pizza.html">COMIDAS</a>
+            </div>
+
+            <div class="contenedor__menu__postres">
+                <a class="contenedor__menu__texto" href="postres/postre.html">POSTRE</a>
+            </div>
+        </section>
+
+        <section class="contenedor__redes">
+            <h1>¡SÍGUENOS!</h1>
+            <div class="menu_social">
+                <!-- Facebook -->
+                <div class="fb-page" data-href="https://www.facebook.com/italiannis/" data-tabs="timeline" data-width="500" data-height="400" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                    <blockquote cite="https://www.facebook.com/TU_PAGINA" class="fb-xfbml-parse-ignore">
+                        <a href="https://www.facebook.com/italiannis/">Italiannis</a>
+                    </blockquote>
+                </div>
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/italiannismexico/" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram"
+                        width="28" height="28" viewBox="0 0 24 24" stroke-width="2" stroke="#000000" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"></path>
+                        <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                        <path d="M16.5 7.5l0 .01"></path>
+                    </svg>
+                </a>
+
+                <!-- Twitter -->
+                <a href="https://twitter.com/italiannismx" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter"
+                        width="28" height="28" viewBox="0 0 24 24" stroke-width="2" stroke="#000000" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path
+                            d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <section class="footer">
+        <div class="footer__contenedor">
+            <a href="index.html">
+                <img class="footer__logo" src="img/logo2_italiannis.png" alt="Logotipo">
+            </a>
+            <a class="footer__texto" href="https://www.italiannis.com.mx/AVISO-de-privacidad/">Aviso de privacidad</a>
+            <a class="footer__texto" href="https://www.italiannis.com.mx/Politicas-de-uso-del-sitio-web/">Políticas del uso del sitio web</a>
+        </div>
+    </section>
+
+    <footer class="subfooter">
+        <p class="subfooter__texto">Italianni’s Copyrigth 2022. Todos los Derechos Reservados</p>
+    </footer>
+
+</body>
+
+</html>
